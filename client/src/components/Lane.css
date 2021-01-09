@@ -1,0 +1,64 @@
+.container {
+  margin-top: 20px;
+  height: 450px;
+  width: 80%;
+}
+
+.lane {
+  background-image: url('../images/bowlinglane.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  height: 100%;
+  width: 100%;
+}
+
+.ball {
+  bottom: 45%;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  width: 20px;
+}
+
+.ball:hover {
+  cursor: pointer;
+}
+
+.rolling-ball {
+  animation: bolling 1s;
+  bottom: 45%;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  width: 20px;
+}
+
+@keyframes bolling {
+  25%{
+    left: 53%;
+    bottom: 48%;
+  }
+
+  50%{
+    left: 54%;
+    bottom: 50%;
+  }
+
+  66% {
+    left: 55%;
+    bottom: 53%;
+  }
+
+  75% {
+    left: 54%;
+    bottom: 55%;
+  }
+
+  100%{
+    left: 53%;
+    bottom: 60%;
+  }
+}
