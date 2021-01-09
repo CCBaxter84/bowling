@@ -1,28 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header.jsx';
 import Lane from './Lane.jsx';
+import getScore from './getScore.js';
 import './App.css';
 
 function App() {
-  const [ score, setScore ] = useState([
-    [], [], [], [], [],
-    [], [], [], [], [], []
-  ]);
+  const [ frames, setFrames ] = useState([3, 5, 8]);
+  const [ score, setScore ] = useState(0);
 
-  const updateScore = (score, frame, turn) => {
-    setScore(prev => {
-      let updatedScore = [...prev];
-      let currentFrame = frame - 1;
-      let previousFrame = frame - 2;
-      let twoFramesPrev = frame - 3;
-      if (updatedScore[currentFrame].length === 0) {
-        updatedScore[currentFrame] = turn;
-      } else {
-        let temp = updatedScore[currentFrame];
-        updatedScore[currentFrame] = temp + turn;
-      }
-    });
+  const updateScore = () => {
+    setScore(getScore(frames));
   };
+
+  useEffect(() => {
+    updateScore();
+  }, []);
 
   return (
     <>

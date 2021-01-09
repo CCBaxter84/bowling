@@ -45,16 +45,22 @@ function Lane() {
     return Math.floor(Math.random() * (range + 1))
   };
 
+  const handleReset = event => {
+    setDownPins(false);
+    setBowl(false);
+  }
+
   return (
     <section className='container'>
       <section className='lane'>
-        {cleanPins ? <StandingPins /> : pins[1]}
+        {cleanPins ? <StandingPins /> : pins[getRandomNumber()]}
         <img
           className={ballClass}
           onClick={handleClick}
           src={ball}
         />
       </section>
+      <button onClick={handleReset}>Clear lane</button>
     </section>
   );
 };

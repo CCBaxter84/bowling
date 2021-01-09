@@ -5,32 +5,32 @@
 
 .pins-last-row {
   grid-column: 11 / 14;
-  grid-row: 3 / 5;
-  margin-left: 10px;
+  grid-row: 4 / 6;
+  margin-left: 5px;
   margin-top: 3px;
   z-index: 1;
 }
 
 .pins-third-row {
   grid-column: 11 / 14;
-  grid-row: 3 / 6;
-  margin-left: 15px;
+  grid-row: 4 / 6;
+  margin-left: 10px;
   margin-top: 6px;
   z-index: 2;
 }
 
 .pins-second-row {
   grid-column: 11 / 14;
-  grid-row: 3 / 6;
-  margin-left: 20px;
+  grid-row: 4 / 6;
+  margin-left: 15px;
   margin-top: 10px;
   z-index: 3;
 }
 
 .pins-first-row {
   grid-column: 11 / 14;
-  grid-row: 3 / 6;
-  margin-left: 25px;
+  grid-row: 4 / 6;
+  margin-left: 20px;
   margin-top: 13px;
   z-index: 4;
 }
